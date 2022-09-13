@@ -8,6 +8,8 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
+            Console.WriteLine( PelindromeWithRecursiveLocalFunction.IsWordPalindrome("Racecary"));
+
             //var clouds = new List<int> { 0, 0, 1, 0, 0, 1, 0 };
             //var clouds = new List<int> { 0, 0 };
             //var clouds = new List<int> { 0, 1 };
