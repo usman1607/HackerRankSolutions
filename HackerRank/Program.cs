@@ -8,6 +8,12 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(IsPangram("The quicumps over the lazy dog"));
+            
+            JesseAndCookies.Solution();
+
+            SimpleTextEditor.TextEditor();
+
             Console.WriteLine( PelindromeWithRecursiveLocalFunction.IsWordPalindrome("Racecary"));
 
             //var clouds = new List<int> { 0, 0, 1, 0, 0, 1, 0 };
@@ -32,7 +38,17 @@ namespace HackerRank
             var bribes = new List<int>() { 1, 2, 5, 3, 4, 7, 8, 6 };
             Console.WriteLine(minimumSwaps(bribes.ToArray()));
         }
-
+        public static bool IsPangram(string str)
+        {
+            for (char i = 'a'; i <= 'z'; i++)
+            {
+                if (str.IndexOf(i, StringComparison.OrdinalIgnoreCase) < 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
         //Get the minimum number of swap to sort the array...
         //Question link == https://www.hackerrank.com/challenges/minimum-swaps-2/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays&h_r=next-challenge&h_v=zen

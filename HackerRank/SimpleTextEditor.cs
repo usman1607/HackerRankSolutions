@@ -84,6 +84,41 @@ namespace HackerRank
      */
     public class SimpleTextEditor
     {
+        public static void TextEditor()
+        {
+            int Q = Convert.ToInt32(Console.ReadLine().Trim());
+            Stack<string> opsStack = new Stack<string>();
+            var s = new StringBuilder();
+            var ops = Console.ReadLine();
+            var _ops = ops.Split(',');
+            foreach (var op in _ops)
+            {
+                switch (op[0])
+                {
+                    case '1':
+                        opsStack.Push($"{s.ToString()}");
+                        s.Append(op.Substring(2));
+                        break;
+                    case '2':
+                        opsStack.Push($"{s.ToString()}");
+                        s.Remove(s.Length - int.Parse(op.Substring(2)), int.Parse(op.Substring(2)));
+                        break;
+                    case '3':
+                        Console.WriteLine(s[int.Parse(op.Substring(2)) - 1]);
+                        break;
+                    case '4':
+                        s = new StringBuilder(opsStack.Pop());
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
 
     }
+
+    
 }
+
+
