@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HackerRank
 {
+    //https://www.hackerrank.com/challenges/one-week-preparation-kit-no-prefix-set/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-seven
     public class NoPrefixSet
     {
         public static void Solution()
