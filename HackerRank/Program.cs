@@ -8,6 +8,8 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
+            
+            NoPrefixSet.Solution();
             Console.WriteLine(IsPangram("The quicumps over the lazy dog"));
             
             JesseAndCookies.Solution();
