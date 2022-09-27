@@ -41,7 +41,6 @@ namespace HackerRank
                 all.Add(word);
             }
             Console.Write("GOOD SET");
-
         }
 
     }
