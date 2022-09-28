@@ -8,7 +8,8 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            
+            int[] ints = { 1, 21, 4, 7, 3, 1, 4, 2, 5, 8 };
+            Console.WriteLine($"[{string.Join(", ", SequenceOfNeighbor(11,ints))}]");
             NoPrefixSet.Solution();
             Console.WriteLine(IsPangram("The quicumps over the lazy dog"));
             
@@ -50,6 +51,33 @@ namespace HackerRank
                 }
             }
             return true;
+        }
+
+        //Write a program to find a sequence of neighbor numbers in an array, which has a sum of certain number S.Example: {4, 3, 1, 4, 2, 5, 8}, S=11 => {4, 2, 5}.
+        static int[] SequenceOfNeighbor(int S, int[] arr)
+        {
+            int sum = 0;
+            int start = 0;
+            var list = new List<int>();
+            for(int i = 0; i < arr.Length; i++)
+            {                
+                while(sum > S && start < i )
+                {
+                    sum -= arr[start]; start++;
+                }
+
+                if(sum == S)
+                {
+                    for(int j = start; j < i; j++)
+                    {
+                        list.Add(arr[j]);
+                    }
+                    break;
+                }
+                sum += arr[i];
+            }
+
+            return list.ToArray();
         }
 
         //Get the minimum number of swap to sort the array...
