@@ -8,6 +8,8 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(LegoBlocks.Solution(2, 3));
+
             int[] ints = { 1, 21, 4, 7, 3, 1, 4, 2, 5, 8 };
             Console.WriteLine($"[{string.Join(", ", SequenceOfNeighbor(11,ints))}]");
             NoPrefixSet.Solution();
