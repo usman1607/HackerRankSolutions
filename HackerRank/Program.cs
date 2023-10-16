@@ -27,7 +27,6 @@ namespace HackerRank
             var clouds = new List<int> { 0, 0, 0, 0, 1, 0 };
             Console.WriteLine(jumpingOnClouds(clouds));
 
-
             //var path = "UDDDUDUU";
             var path = "UUDDDDUU";
             var steps = 8;
